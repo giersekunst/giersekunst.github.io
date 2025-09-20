@@ -7,4 +7,4 @@ header:
 
 ---
 
-<img src='/images/Syllhet_horse.jpeg'>
+
