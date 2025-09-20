@@ -1,7 +1,7 @@
 ---
 layout: home
 title: "Gallery"
-author_profile: false
+author_profile: true
 ---
 <div class="gallery">
 
