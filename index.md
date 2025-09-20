@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: home
 title: "Gallery"
 author_profile: false
 ---
