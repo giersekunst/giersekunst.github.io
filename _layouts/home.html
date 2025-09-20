@@ -5,6 +5,7 @@ layout: default
 <div id="main" class="main__wrapper">
   {% include sidebar.html %}
 
+  <!-- Main content area (next to sidebar) -->
   <div class="page__inner-wrap">
     <div class="gallery">
       <!-- Gallery Items -->
@@ -34,6 +35,13 @@ layout: default
 </div>
 
 <style>
+/* Ensure page__inner-wrap takes space next to sidebar */
+.page__inner-wrap {
+  flex: 1;
+  min-width: 0; /* fixes flex overflow issues */
+  padding-left: 20px; /* optional spacing from sidebar */
+}
+
 /* Gallery layout */
 .page__inner-wrap .gallery {
   display: flex;
@@ -85,9 +93,20 @@ layout: default
   position:absolute;
   top:20px;
   right:40px;
-  font-size: 3rem;
+  font-size:3rem;
   color:white;
   cursor:pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page__inner-wrap .gallery {
+    justify-content: center;
+  }
+  .gallery-item {
+    width: 150px;
+    height: 225px;
+  }
 }
 </style>
 
