@@ -5,5 +5,4 @@ permalink: /blog/sa-pa-market/
 header:
   overlay_image: /images/Sa_Pa_market_Little_treat.jpeg
 excerpt: "<img src='/images/Sa_Pa_market_Little_treat.jpeg'>"
-
 ---
