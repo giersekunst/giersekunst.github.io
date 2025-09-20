@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <div class="archive">
+    <h1>{{ page.title }}</h1>
+
+    <div class="gallery">
+      {% for post in site.posts %}
+        <div class="gallery-item">
+          <a href="{{ post.url | relative_url }}">
+            {% if post.header.overlay_image %}
+              <img src="{{ post.header.overlay_image | relative_url }}" alt="{{ post.title }}">
+            {% else %}
+              <img src="{{ '/images/default.jpg' | relative_url }}" alt="{{ post.title }}">
+            {% endif %}
+          </a>
+          <p>{{ post.title }}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+<style>
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.gallery-item {
+  width: 200px;         /* narrow width */
+  text-align: center;
+}
+.gallery-item img {
+  width: 200px;
+  height: 300px;        /* taller height for portrait style */
+  object-fit: cover;    /* crop center to fill */
+  border-radius: 6px;
+}
+</style>
