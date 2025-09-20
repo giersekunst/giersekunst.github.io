@@ -16,7 +16,7 @@ description              : &description ""   # Update this with a general descri
 url                      : https://giersekunst.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : ""
+repository               : "giersekunst/giersekunst.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -27,13 +27,13 @@ author:
   name             : "Fernanda Giersdorf"
   pronouns         : # example: "she/her"  
   bio              : "From Brazil, currently based in north Germany"
-  location         : ""
-  employer         : ""
+  location         : "Grebin"
+  employer         : #""
   uri              : # URL
   email            : "gierse.kunst@gmail.com" 
 
   # Social media
-  instagram        : # gierse.kunst
+  instagram        :  "gierse.kunst"
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
@@ -48,10 +48,6 @@ comments:
     shortname            :
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : "gh-pages" # "master", "gh-pages"
@@ -167,8 +163,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: true
+      read_time: false
+      comments: false
       share: true
       related: true
   # _pages
