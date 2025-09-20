@@ -6,5 +6,3 @@ header:
   overlay_image: /images/Sa_Pa_market_Little_treat.jpeg
 
 ---
-
-<img src='/images/Sa_Pa_market_Little_treat.jpeg'>
