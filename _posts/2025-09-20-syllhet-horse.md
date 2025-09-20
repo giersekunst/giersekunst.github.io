@@ -6,3 +6,4 @@ header:
   overlay_image: /images/Syllhet_horse.jpeg
 
 ---
+<img src='/images/Syllhet_horse.jpeg'>
