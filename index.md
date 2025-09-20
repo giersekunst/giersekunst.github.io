@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 title: "Gallery"
 author_profile: true
 permalink: /
