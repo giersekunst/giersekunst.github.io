@@ -2,34 +2,40 @@
 layout: default
 ---
 
-<div id="main" role="main">
+<div id="main" class="main__wrapper">
   {% include sidebar.html %}
 
-  <div class="gallery">
-    <!-- Sa Pa Market -->
-    <div class="gallery-item">
-      <a href="/images/Sa_Pa_market_Little_treat.jpeg" class="lightbox-link">
-        <img src="/images/Sa_Pa_market_Little_treat.jpeg" alt="Sa Pa Market">
-      </a>
-    </div>
+  <div class="page__inner-wrap">
+    <div class="gallery">
+      <!-- Gallery Items -->
 
-    <!-- Sylhet Horse -->
-    <div class="gallery-item">
-      <a href="/images/Syllhet_horse.jpeg" class="lightbox-link">
-        <img src="/images/Syllhet_horse.jpeg" alt="Sylhet Horse">
-      </a>
+      <!-- Sa Pa Market -->
+      <div class="gallery-item">
+        <a href="/images/Sa_Pa_market_Little_treat.jpeg">
+          <img src="/images/Sa_Pa_market_Little_treat.jpeg" alt="Sa Pa Market">
+        </a>
+      </div>
+
+      <!-- Sylhet Horse -->
+      <div class="gallery-item">
+        <a href="/images/Syllhet_horse.jpeg">
+          <img src="/images/Syllhet_horse.jpeg" alt="Sylhet Horse">
+        </a>
+      </div>
+
     </div>
   </div>
 </div>
 
-<!-- Lightbox container -->
+<!-- Lightbox overlay -->
 <div id="lightbox-overlay" style="display:none;">
   <span class="lightbox-close">&times;</span>
   <img id="lightbox-img" src="" alt="">
 </div>
 
 <style>
-.gallery {
+/* Gallery layout */
+.page__inner-wrap .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -37,8 +43,8 @@ layout: default
 }
 
 .gallery-item {
-  width: 200px;
-  height: 300px;
+  width: 200px;       /* thumbnail width */
+  height: 300px;      /* portrait style */
   overflow: hidden;
   border-radius: 6px;
 }
@@ -46,7 +52,7 @@ layout: default
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;  /* crops image to fill thumbnail */
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -55,7 +61,7 @@ layout: default
   transform: scale(1.05);
 }
 
-/* Lightbox styles */
+/* Lightbox overlay */
 #lightbox-overlay {
   position: fixed;
   top:0;
@@ -87,27 +93,27 @@ layout: default
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const lightboxLinks = document.querySelectorAll(".lightbox-link");
-  const lightboxOverlay = document.getElementById("lightbox-overlay");
+  const lightboxLinks = document.querySelectorAll(".gallery-item a");
+  const overlay = document.getElementById("lightbox-overlay");
   const lightboxImg = document.getElementById("lightbox-img");
-  const lightboxClose = document.querySelector(".lightbox-close");
+  const closeBtn = document.querySelector(".lightbox-close");
 
   lightboxLinks.forEach(link => {
     link.addEventListener("click", function(e){
       e.preventDefault();
-      lightboxImg.src = this.href;
-      lightboxOverlay.style.display = "flex";
+      lightboxImg.src = this.href;  // full-size image
+      overlay.style.display = "flex";
     });
   });
 
-  lightboxClose.addEventListener("click", function(){
-    lightboxOverlay.style.display = "none";
+  closeBtn.addEventListener("click", function(){
+    overlay.style.display = "none";
     lightboxImg.src = "";
   });
 
-  lightboxOverlay.addEventListener("click", function(e){
-    if(e.target === this) {
-      lightboxOverlay.style.display = "none";
+  overlay.addEventListener("click", function(e){
+    if(e.target === overlay) {
+      overlay.style.display = "none";
       lightboxImg.src = "";
     }
   });
