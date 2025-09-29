@@ -7,8 +7,8 @@ permalink: /
 
 <div class="gallery-container">
   <!-- Sa Pa Market -->
-  <a href="/images/Sa_Pa_market_Little_treat.jpeg" class="glightbox" data-title="Sa Pa Market – Little Treat">
-    <img src="/images/Sa_Pa_market_Little_treat.jpeg" alt="Sa Pa Market">
+  <a href="/images/Little_treat.jpeg" class="glightbox" data-title="Dong Ba Market – Little treat">
+    <img src="/images/Little_treat.jpeg" alt="Little treat">
   </a>
 
   <!-- Sylhet Horse -->
