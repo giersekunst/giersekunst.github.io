@@ -12,12 +12,14 @@ main:
   - title: "About"
     url: /about/
         
-  - title: "Blog Posts"
-    url: /year-archive/
+#  - title: "Works"
+#    url: /year-archive/
     
   - title: "CV"
     url: /cv/
-    
+
+  - title: "Contact"
+    url: /contact/
   # - title: "CV"
   #   url: /cv-json/
     
